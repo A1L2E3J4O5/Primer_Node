@@ -4,11 +4,15 @@ let taskList = []
 
 function menu ()
 {
-    console.log("digite el numero de la opcion que quiere ejectuar");
-    console.log(" 1 para añadir tarea");
-    console.log("2 para eliminar tarea");
-    console.log("3 para completar tarea tarea");
-    console.log("4 para imprimir tarea");
+    let salir = false;
+    while(salir == false)
+    {
+        console.log("digite el numero de la opcion que quiere ejectuar");
+        console.log(" 1 para añadir tarea");
+        console.log("2 para eliminar tarea");
+        console.log("3 para completar tarea tarea");
+        console.log("4 para imprimir tarea");
+        console.log("5 Finalizar");
 
     const Elegir = readlineSync.question ("digite la opcion ");
 
@@ -25,11 +29,14 @@ function menu ()
             break;
         case "4":
             console.log(taskList);
+            break;
+        case '5':
+            salir = true;
         default:
             console.log("opcion invalida")
             break;
-    }
-}
+    }}
+};
 
 function añadirTarea ()
 {
