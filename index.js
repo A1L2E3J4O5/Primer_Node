@@ -57,7 +57,7 @@ function eliminarTarea ()
 function completarTarea ()
 {
     console.log(taskList)
-    const id = readlineSync.question("digite el id que quiere eliminar")
+    const id = readlineSync.question("digite el id que quiere completar")
 
     const auxTaskList = taskList.map((Tarea)=>
     {
